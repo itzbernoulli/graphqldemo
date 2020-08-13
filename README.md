@@ -1,24 +1,25 @@
-# README
+This is a sample GraphQL API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Installation procedure
+1. clone the project from the Github repo
 
-Things you may want to cover:
+2. cd into the folder
 
-* Ruby version
+3. run `bundle install` to install all dependencies
 
-* System dependencies
+4. run `rails db:create db:migrate db:seed` to create, migrate and seed the database, 
 
-* Configuration
+5. run `rails s` and take it for a spin.
 
-* Database creation
+6. Make a sample call in your client (Insomnia or Postman) to `http://localhost:3000/graphql` with the query below
+    ```query {
+        allOrders {
+            description
+            total      
+            payments {
+                amount
+            }
+        }
+    }```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+7. Enjoy.
